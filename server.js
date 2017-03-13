@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/webScraperDB");
+// mongoose.connect("mongodb://localhost/webScraperDB");
+mongoose.connect("mongodb://heroku_p249q4df:olei3ietj3gqfjq3qkte8357do@ds129030.mlab.com:29030/heroku_p249q4df");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -153,6 +154,6 @@ app.post("/articles/:id", function(req, res) {
 
 
 // Listen on port 3001
-app.listen(3001, function() {
+app.listen(process.env.PORT || 3001, function() {
   console.log("App running on port 3001!");
 });
