@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <style>
+      body { background-color: #F2F6D0 }
+      #scrapeButton {
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+        float:left;
+        height: 50px;
+        margin-top: 5px;
+      }
+      #deleteButton {
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+        float:right;
+        height: 50px;
+        margin-top: 5px;
+      }
+      #wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+        /*padding-right: 5%;*/
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 60%;
+        height: 700px;
+      }
+      #notes {
+        float: right;
+        width: 30%;
+        /*padding-right: 5px;*/
+        /*margin-right: 5px;*/
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #FCF5C7;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+        /*margin-right: 5px;*/
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+        /*margin-right: 5px;*/
+      }
+    </style>
+  </head>
+  <body>
+   
+    <div>
+      <button type="button" id="scrapeButton">Scrape NYTimes!</button>  
+      <button type="button" id="deleteButton">Remove Articles!</button>  
+    </div> 
+    <div id="wrapper">
+      <h1>NYT Scraper</h1>
+      <h2><i>I can do this!...because I copied a significant portion of the example.</i></h2>
+      <div id="articles"></div>
+      <div id="notes"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
